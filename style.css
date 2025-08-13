@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  color: hsl(212, 21%, 14%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 340px;
+  background-color: hsl(0, 0%, 100%);
+  margin: 50px;
+  border-radius: 10px;
+}
+
+.container .Product-img {
+  width: 100%;
+  height: 240px !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("images/image-product-mobile.jpg");
+  border-radius: 10px 10px 0 0;
+}
+.container .content {
+  width: 90%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.container .content .product {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+.container .content .price {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.container .content .price .current-price {
+  color: hsl(158, 36%, 37%);
+}
+.container .content .price .old-price {
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  width: 100%;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(30, 38%, 92%);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+button img {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+@media (min-width: 48em) {
+  .container .content h1 {
+    line-height: 1;
+  }
+  .container .content .description {
+    margin-bottom: 0.5rem;
+  }
+  p {
+    line-height: 1.6;
+  }
+  .container {
+    width: 600px;
+    flex-direction: row;
+  }
+  .container .Product-img {
+    background-image: url("images/image-product-desktop.jpg");
+    height: 450px !important;
+    border-radius: 10px 0 0 10px;
+  }
+  .container .content {
+    padding: 1rem 2rem;
+    gap: 1.5rem;
+  }
+  button {
+    padding: 1rem 0;
+  }
+  button:hover {
+    background-color: hsl(158, 36%, 22%);
+    transition: 0.3s ease;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(158, 36%, 37%);
+}
